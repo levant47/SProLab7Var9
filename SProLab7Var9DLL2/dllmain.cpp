@@ -27,8 +27,7 @@ void DrawDiagram(HDC hdc, HWND hwnd, const char* source)
 
     frequencies.clear();
 
-    int sourceSize = countStringLength(source);
-
+    int sourceSize = 0;
     for (int i = 0; i < sourceSize; i++)
     {
         if (source[i] == ' ')
@@ -38,6 +37,7 @@ void DrawDiagram(HDC hdc, HWND hwnd, const char* source)
 
         char letter = source[i];
         frequencies[letter]++;
+        sourceSize++;
     }
 
     int counter = 0;
