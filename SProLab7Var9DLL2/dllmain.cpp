@@ -28,7 +28,7 @@ void DrawDiagram(HDC hdc, HWND hwnd, const char* source)
     frequencies.clear();
 
     int sourceSize = 0;
-    for (int i = 0; i < sourceSize; i++)
+    for (int i = 0; source[i] != 0; i++)
     {
         if (source[i] == ' ')
         {
